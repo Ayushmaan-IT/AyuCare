@@ -15,7 +15,10 @@ connectCloudinary();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://ayucare-frontend.onrender.com"], // allow frontend
+    origin: [
+      "https://ayucare-frontend.onrender.com",
+      "https://ayucare-admin.onrender.com", // add admin origin
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
